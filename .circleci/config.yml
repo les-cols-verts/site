@@ -1,7 +1,7 @@
 common_properties: &common_properties
   docker:
-    - image: circleci/node:12.16.1-browsers
-  working_directory: ~/trollepierre/recontact_travel_blog
+    - image: circleci/node:14.15.0-browsers
+  working_directory: ~/les-cols-verts/les-cols-verts
 
 version: 2
 jobs:
@@ -13,7 +13,7 @@ jobs:
       - save_cache:
           key: v2-code-{{ checksum ".circle-cache-key" }}
           paths:
-            - ~/trollepierre/recontact_travel_blog
+            - ~/les-cols-verts/les-cols-verts
 
   install_front:
     <<: *common_properties
@@ -79,21 +79,21 @@ jobs:
       - run:
           name: Deploy branch to Heroku branch
           command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/recontact-branch.git $CIRCLE_BRANCH:master --force
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/les-cols-verts-branch.git $CIRCLE_BRANCH:master --force
 
   validate_html5v:
     <<: *common_properties
     steps:
       - run: yarn add html5-validator
-      - run: ./node_modules/.bin/html5v https://french-test.recontact.me/
-      - run: ./node_modules/.bin/html5v https://english-test.recontact.me/articles/85
+      - run: ./node_modules/.bin/html5v https://french-test.les-cols-verts.me/
+      - run: ./node_modules/.bin/html5v https://english-test.les-cols-verts.me/articles/85
 
   validate_html5v_branch:
     <<: *common_properties
     steps:
       - run: yarn add html5-validator
-      - run: ./node_modules/.bin/html5v https://recontact-branch.herokuapp.com/
-      - run: ./node_modules/.bin/html5v https://recontact-branch.herokuapp.com/articles/85
+      - run: ./node_modules/.bin/html5v https://les-cols-verts-branch.herokuapp.com/
+      - run: ./node_modules/.bin/html5v https://les-cols-verts-branch.herokuapp.com/articles/85
 
   lighthouse:
     <<: *common_properties
@@ -124,8 +124,8 @@ jobs:
           keys:
             - v2-code-{{ checksum ".circle-cache-key" }}
       - run: yarn add webpagetest
-      - run: ./node_modules/.bin/webpagetest test https://french-test.recontact.me/ --first --poll --specs tools/webpagetest-threshold.json -k $WEBPAGETEST_API_KEY
-      - run: ./node_modules/.bin/webpagetest test https://english-test.recontact.me/articles/85 --first --poll --specs tools/webpagetest-article-threshold.json -k $WEBPAGETEST_API_KEY
+      - run: ./node_modules/.bin/webpagetest test https://french-test.les-cols-verts.me/ --first --poll --specs tools/webpagetest-threshold.json -k $WEBPAGETEST_API_KEY
+      - run: ./node_modules/.bin/webpagetest test https://english-test.les-cols-verts.me/articles/85 --first --poll --specs tools/webpagetest-article-threshold.json -k $WEBPAGETEST_API_KEY
 
   deploy_staging:
     <<: *common_properties
@@ -138,7 +138,7 @@ jobs:
       - run:
           name: Deploy dev to Heroku staging
           command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/recontact-test.git dev:master
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/les-cols-verts-test.git dev:master
 
   deploy_master:
     <<: *common_properties
@@ -151,37 +151,11 @@ jobs:
       - run:
           name: Deploy master to Recontact (Prod) - Heroku
           command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/recontact.git master
-
-  deploy_recontact_api:
-    <<: *common_properties
-    shell: /bin/bash --login
-    steps:
-      - run: echo "${CIRCLE_BRANCH}_${CIRCLE_SHA1}" > .circle-cache-key
-      - restore_cache:
-          keys:
-            - v2-code-{{ checksum ".circle-cache-key" }}
-      - run:
-          name: Deploy master to Recontact API - Heroku
-          command: |
-            git push https://heroku:$HEROKU_RECONTACT_API_KEY@git.heroku.com/recontact-api.git master
-
-  deploy_recontact_blog:
-    <<: *common_properties
-    shell: /bin/bash --login
-    steps:
-      - run: echo "${CIRCLE_BRANCH}_${CIRCLE_SHA1}" > .circle-cache-key
-      - restore_cache:
-          keys:
-            - v2-code-{{ checksum ".circle-cache-key" }}
-      - run:
-          name: Deploy master to Pierre Blog on Heroku
-          command: |
-            git push https://heroku:$HEROKU_RECONTACT_BLOG_KEY@git.heroku.com/recontact-blog.git master
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/les-cols-verts.git master
 
 workflows:
   version: 2
-  recontact-workflow:
+  les-cols-verts-workflow:
     jobs:
       - checkout_code
       - install_front:
@@ -231,4 +205,3 @@ workflows:
           filters:
             branches:
               only: master
-
