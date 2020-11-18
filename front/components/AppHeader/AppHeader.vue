@@ -18,10 +18,11 @@ export default {
 
 <style>
 .app-header {
-  margin: 8px;
+  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background-color: #ffffff;
 }
 
 .title {
