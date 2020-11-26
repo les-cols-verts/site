@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),
+  url(../assets/fonts/Montserrat-Bold.woff2) format("woff");
+}
+
+html {
+  font-family: "Montserrat-Bold", Arial, sans-serif;
+}

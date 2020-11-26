@@ -26,9 +26,7 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, Arial, sans-serif;
   display: block;
-  font-weight: 300;
   font-size: 16px;
   color: #35495e;
   letter-spacing: 1px;
