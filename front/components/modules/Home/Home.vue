@@ -12,6 +12,7 @@
       />
     </picture>
     <HomeCta />
+    <Map />
   </main>
 </template>
 
@@ -22,9 +23,10 @@
 </style>
 <script>
 import HomeCta from '@/components/modules/Home/HomeCta/HomeCta';
+import Map from '@/components/modules/Home/Map/Map';
 
 export default {
-  components: { HomeCta },
+  components: { HomeCta, Map },
 };
 </script>
 <style scoped>
