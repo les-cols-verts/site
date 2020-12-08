@@ -38,4 +38,17 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  buildModules: [
+    // Simple usage
+    '@nuxtjs/dotenv',
+
+    // With options
+    [
+      '@nuxtjs/dotenv',
+      {
+        /* module options */
+      },
+    ],
+  ],
 };

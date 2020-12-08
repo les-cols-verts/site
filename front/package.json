@@ -8,7 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore components layouts pages",
     "lint": "yarn lint:js && yarn lint:style",
     "lint:fix": "yarn lint:js --fix && yarn lint:style --fix",
     "test": "jest",
@@ -22,6 +22,7 @@
     "nuxt": "^2.14.6"
   },
   "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",

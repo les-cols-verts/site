@@ -22,7 +22,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .title {
@@ -37,10 +37,6 @@ export default {
 }
 
 @media only screen and (min-width: 640px) {
-  .app-header {
-
-  }
-
   .title {
     font-size: 30px;
   }

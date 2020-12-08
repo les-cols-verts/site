@@ -21,7 +21,7 @@ export default {
 <style scoped>
 .link {
   background-color: #0d8544;
-  color: #ffffff;
+  color: #fff;
   margin: 1em;
   padding: 1em 2em;
   font-weight: bold;

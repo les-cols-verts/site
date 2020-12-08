@@ -1,5 +1,6 @@
-# Recontact - Travel blog
+# Les Cols Verts site
 
+(to update)
 [![CircleCI](https://circleci.com/gh/trollepierre/recontact_travel_blog/tree/master.svg?style=svg)](https://circleci.com/gh/trollepierre/recontact_travel_blog/tree/master)
 [![Known Vulnerabilities](https://snyk.io/test/github/trollepierre/recontact_travel_blog/badge.svg)](https://snyk.io/test/github/trollepierre/recontact_travel_blog)
 [![Netlify Status EN](https://api.netlify.com/api/v1/badges/56d6576e-c95a-41b4-999f-9e0bab48d768/deploy-status)](https://app.netlify.com/sites/en-recontact/deploys)
@@ -49,3 +50,11 @@ https://www.postgresql.org/download/
 ## Spot a bug
 
 Fill a bug and provide me this information please https://mybrowser.fyi
+
+## Troubleshooting
+
+Facing an error, like:
+> An API access token is required to use Mapbox GL. See https://www.mapbox.com/api-documentation/#access-tokens-and-token-scopes
+
+This means, you need a MAPBOX_API_TOKEN .
+ask another developer by slack or with webmaster@lescolsverts.fr
