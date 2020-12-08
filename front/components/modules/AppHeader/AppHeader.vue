@@ -47,10 +47,6 @@ export default {
 }
 
 @media only screen and (min-width: 1024px) {
-  .app-header {
-
-  }
-
   .title {
     font-size: 40px;
   }
