@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Home from '../components/Home/Home';
-import AppHeader from '../components/AppHeader/AppHeader';
+import Home from '../components/modules/Home/Home';
+import AppHeader from '../components/modules/AppHeader/AppHeader';
 
 export default {
   components: { Home, AppHeader },

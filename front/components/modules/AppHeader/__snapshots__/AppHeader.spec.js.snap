@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader should match snapshot 1`] = `
+<header class="app-header">
+  <logo-stub></logo-stub>
+  <h1 class="title">
+    Les Cols verts&nbsp;: pollinisateurs<br>d'agriculture urbaine
+  </h1>
+  <div class="donation"></div>
+</header>
+`;

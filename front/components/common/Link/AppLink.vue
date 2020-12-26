@@ -21,8 +21,8 @@ export default {
 <style scoped>
 .link {
   background-color: #0d8544;
-  color: #ffffff;
-  margin: 1em;
+  color: #fff;
+  margin: 0.5em;
   padding: 1em 2em;
   font-weight: bold;
   text-decoration: none;
@@ -32,5 +32,11 @@ export default {
 .link:hover,
 .link:focus {
   background-color: #ffbb02;
+}
+
+@media only screen and (min-width: 1024px) {
+  .link {
+    margin: 1em;
+  }
 }
 </style>

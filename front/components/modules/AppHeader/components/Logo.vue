@@ -1,6 +1,6 @@
 <template>
   <img
-    src="../../../static/logo.png"
+    src="../../../../static/logo.png"
     alt="Logo des Cols verts - 3 carottes avec à l'intérieur des fenêtres"
     class="logo"
   />
