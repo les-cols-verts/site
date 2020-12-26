@@ -22,16 +22,21 @@ export default {
     // https://www.mapbox.com/install/js/bundler-complete/
     // https://docs.mapbox.com/mapbox-gl-js/example/
 
+    const parisLocation = [2.213749, 46.227638];
+    const southernLocation = [-25, 40]; // used to display Martinique on the mobile view
     this.map = new mapboxgl.Map({
       accessToken: process.env.NUXT_ENV_MAPBOX_API_TOKEN,
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11', // default style // V11 - V9 => to try
-      center: [2.213749, 46.227638], // starting position as [lng, lat] [-77.04, 38.907],
+      center: window.innerWidth <= 1024 ? southernLocation : parisLocation,
       zoom: 1, // 1 = monde, 2 = europe, 3 = west europe, 4 = france,
     });
 
     this.markers = this.collectifs.map((collectif) => {
-      let popup = `<a href="${collectif.url}" class="font-bold">${collectif.description}</a>`;
+      let popup = `<a href="${collectif.url}" class="font-bold">${collectif.center}</a>`;
+      if (collectif.description) {
+        popup += `<p>${collectif.description}</p>`;
+      }
       popup += `<p>${collectif.address}</p>`;
       popup += `<p>${collectif.city}</p>`;
       popup += `<br><p>${collectif.remark}</p>`;
@@ -73,7 +78,7 @@ export default {
 #map,
 .mapboxgl-canvas {
   min-height: 40vh;
-  min-width: 75vh;
+  min-width: 100%;
 }
 
 .marker {
@@ -82,5 +87,21 @@ export default {
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 650px) {
+  #map,
+  .mapboxgl-canvas {
+    min-height: 60vh;
+    min-width: 75vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #map,
+  .mapboxgl-canvas {
+    min-height: 40vh;
+    min-width: 75vh;
+  }
 }
 </style>

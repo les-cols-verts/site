@@ -57,5 +57,5 @@ Fill a bug and provide me this information please https://mybrowser.fyi
 Facing an error, like:
 > An API access token is required to use Mapbox GL. See https://www.mapbox.com/api-documentation/#access-tokens-and-token-scopes
 
-This means, you need a MAPBOX_API_TOKEN .
+This means, you need a NUXT_ENV_MAPBOX_API_TOKEN .
 ask another developer by slack or with webmaster@lescolsverts.fr

@@ -37,15 +37,20 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
 .map-cta {
   margin-bottom: 30px;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (min-width: 1024px) {
   .map-cta {
     display: flex;
     flex-direction: row;
+    align-items: initial;
   }
 }
 </style>

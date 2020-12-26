@@ -34,12 +34,15 @@ export default {
 .links {
   display: flex;
   flex-direction: column;
-  max-width: 50vw;
+  max-width: 80vw;
+  margin-bottom: 1em;
 }
 
 @media only screen and (min-width: 1024px) {
   .links {
+    max-width: 50vw;
     text-align: center;
+    margin-bottom: 0;
   }
 }
 </style>

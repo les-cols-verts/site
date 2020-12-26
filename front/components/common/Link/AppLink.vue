@@ -22,7 +22,7 @@ export default {
 .link {
   background-color: #0d8544;
   color: #fff;
-  margin: 1em;
+  margin: 0.5em;
   padding: 1em 2em;
   font-weight: bold;
   text-decoration: none;
@@ -32,5 +32,11 @@ export default {
 .link:hover,
 .link:focus {
   background-color: #ffbb02;
+}
+
+@media only screen and (min-width: 1024px) {
+  .link {
+    margin: 1em;
+  }
 }
 </style>
