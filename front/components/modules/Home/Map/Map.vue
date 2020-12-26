@@ -21,8 +21,9 @@ export default {
     // https://gist.github.com/mornir/9e85e65caba46e55269302e8a134e04e
     // https://www.mapbox.com/install/js/bundler-complete/
     // https://docs.mapbox.com/mapbox-gl-js/example/
+
     this.map = new mapboxgl.Map({
-      accessToken: process.env.MAPBOX_API_TOKEN,
+      accessToken: process.env.NUXT_ENV_MAPBOX_API_TOKEN,
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11', // default style // V11 - V9 => to try
       center: [2.213749, 46.227638], // starting position as [lng, lat] [-77.04, 38.907],
