@@ -167,41 +167,41 @@ workflows:
       - build_front:
           requires:
             - install_front
-      - deploy_branch:
-          requires:
-            - test_front
-            - build_front
-          filters:
-            branches:
-              ignore:
-                - dev
-                - master
-      - validate_html5v_branch:
-          requires:
-            - deploy_branch
-      - validate_html5v:
-          requires:
-            - deploy_staging
-      - lighthouse:
-          requires:
-            - deploy_staging
-      - webpagetest:
-          requires:
-            - deploy_staging
-      - bundlesize:
-          requires:
-            - deploy_staging
-      - deploy_staging:
-          requires:
-            - test_front
-            - build_front
-          filters:
-            branches:
-              only: dev
-      - deploy_master:
-          requires:
-            - test_front
-            - build_front
-          filters:
-            branches:
-              only: master
+#      - deploy_branch:
+#          requires:
+#            - test_front
+#            - build_front
+#          filters:
+#            branches:
+#              ignore:
+#                - dev
+#                - master
+##      - validate_html5v_branch:
+##          requires:
+##            - deploy_branch
+##      - validate_html5v:
+##          requires:
+##            - deploy_staging
+##      - lighthouse:
+##          requires:
+##            - deploy_staging
+##      - webpagetest:
+##          requires:
+##            - deploy_staging
+##      - bundlesize:
+##          requires:
+##            - deploy_staging
+#      - deploy_staging:
+#          requires:
+#            - test_front
+#            - build_front
+#          filters:
+#            branches:
+#              only: dev
+#      - deploy_master:
+#          requires:
+#            - test_front
+#            - build_front
+#          filters:
+#            branches:
+#              only: master
