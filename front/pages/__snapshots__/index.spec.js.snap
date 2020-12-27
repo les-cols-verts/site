@@ -4,5 +4,6 @@ exports[`index should match snapshot 1`] = `
 <div class="container">
   <app-header-stub></app-header-stub>
   <home-stub></home-stub>
+  <footer-stub></footer-stub>
 </div>
 `;
