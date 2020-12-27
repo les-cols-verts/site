@@ -14,11 +14,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
   text-align: center;
-  background-color: #def4c6;
+  background-color: $lightGreen;
 }
 </style>

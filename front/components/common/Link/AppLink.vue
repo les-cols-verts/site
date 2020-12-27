@@ -18,10 +18,10 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .link {
-  background-color: #0d8544;
-  color: #fff;
+  background-color: $darkGreen;
+  color: $white;
   margin: 0.5em;
   padding: 1em 2em;
   font-weight: bold;
@@ -31,7 +31,7 @@ export default {
 
 .link:hover,
 .link:focus {
-  background-color: #ffbb02;
+  background-color: $orange;
 }
 
 @media only screen and (min-width: 1024px) {
