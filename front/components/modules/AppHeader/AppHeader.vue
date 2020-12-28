@@ -16,19 +16,19 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .app-header {
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #fff;
+  background-color: $white;
 }
 
 .title {
   display: block;
   font-size: 16px;
-  color: #35495e;
+  color: $brown;
   letter-spacing: 1px;
 }
 
