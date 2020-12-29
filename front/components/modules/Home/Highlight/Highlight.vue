@@ -1,71 +1,76 @@
 <template>
   <div class="highlight">
-    <a href="/mooc" class="link">
-      <span>Mooc Agricultures Urbaines</span>
-      <picture>
-        <source
-          class="image"
-          media="(min-width:650px)"
-          srcset="../../../../static/mooc.png"
-        />
-        <img
-          class="image"
-          src="../../../../static/mooc.png"
-          alt="Mooc Agricultures Urbaines"
-        />
-      </picture>
+    <a
+      href="/mooc"
+      class="link"
+      :style="{ backgroundImage: `url(${require('~/static/mooc.jpg')})` }"
+    >
+      <span class="tile__overlay">
+        <span class="tile__button button button--lowercase button--primary">
+          Mooc Agricultures Urbaines
+        </span>
+      </span>
     </a>
-    <a href="/incubateur" class="link">
-      <span>Incubateur de porteurs de projets</span>
-      <picture>
-        <source
-          class="image"
-          media="(min-width:650px)"
-          srcset="../../../../static/incub.jpg"
-        />
-        <img
-          class="image"
-          src="../../../../static/incub.jpg"
-          alt="Incubateur de porteurs de projets"
-        />
-      </picture>
+    <a
+      href="/incubateur"
+      class="link"
+      :style="{ backgroundImage: `url(${require('~/static/incub.jpg')})` }"
+    >
+      <span class="tile__overlay">
+        <span class="tile__button button button--lowercase button--primary">
+          Incubateur de porteurs de projets
+        </span>
+      </span>
     </a>
   </div>
 </template>
 <script>
 export default {
-  name: 'Highlight'
-}
+  name: 'Highlight',
+};
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .highlight {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.link span {
-  display: none;
+.link {
+  width: 595px;
+  height: 333px;
+  margin: 20px;
 }
 
-.link:hover .image {
-  margin-top: -20px;
-  padding-top: 20px;
+.tile__overlay:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 1s;
 }
 
-.link:hover span {
-  display: block;
-  background-color: white;
-}
-
-.link,
-.image {
+.tile__overlay {
+  display: flex;
+  justify-content: center;
+  height: 100%;
   width: 100%;
 }
 
-@media only screen and (min-width: 1024px) {
-  .link {
-    width: 45%;
-  }
+.link:hover .tile__button {
+  transform: translateY(600%);
+  transition: transform 0.5s;
 }
+
+.tile__button {
+  position: absolute;
+  display: table;
+  background: $darkGreen;
+  color: $white;
+  padding: 0.8em 1.5em;
+  margin: -50px auto auto;
+}
+
+/*@media only screen and (min-width: 1024px) {*/
+/*  .link {*/
+/*    width: 45%;*/
+/*  }*/
+/*}*/
 </style>
