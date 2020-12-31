@@ -9,5 +9,6 @@ exports[`Home should match snapshot 1`] = `
     <homecta-stub></homecta-stub>
     <!---->
   </div>
+  <highlight-stub></highlight-stub>
 </main>
 `;
