@@ -13,8 +13,9 @@
     </picture>
     <div class="map-cta">
       <HomeCta />
-      <Map />
+      <Map v-if="isOnline" />
     </div>
+    <highlight />
   </main>
 </template>
 
@@ -26,9 +27,15 @@
 <script>
 import HomeCta from '@/components/modules/Home/HomeCta/HomeCta';
 import Map from '@/components/modules/Home/Map/Map';
+import Highlight from '@/components/modules/Home/Highlight/Highlight'
 
 export default {
-  components: { HomeCta, Map },
+  components: { Highlight, HomeCta, Map },
+  computed: {
+    isOnline() {
+      return process.env.OFFLINE !== 'true';
+    },
+  },
 };
 </script>
 <style scoped>
