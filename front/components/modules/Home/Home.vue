@@ -13,7 +13,10 @@
     </picture>
     <div class="map-cta">
       <HomeCta />
-      <Map v-if="isOnline" />
+      <div class="map-container">
+        <h2 class="map-headline">Retrouvez nos collectifs Cols verts</h2>
+        <Map v-if="isOnline" />
+      </div>
     </div>
     <highlight />
   </main>
@@ -38,7 +41,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .homepage {
   display: flex;
   flex-direction: column;
@@ -51,6 +54,20 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.map-headline {
+  font-size: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  color: $brown;
 }
 
 @media only screen and (min-width: 1024px) {

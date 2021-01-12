@@ -7,7 +7,10 @@ exports[`Home should match snapshot 1`] = `
   </picture>
   <div class="map-cta">
     <homecta-stub></homecta-stub>
-    <!---->
+    <div class="map-container">
+      <h2 class="map-headline">Retrouvez nos collectifs Cols verts</h2>
+      <!---->
+    </div>
   </div>
   <highlight-stub></highlight-stub>
 </main>
