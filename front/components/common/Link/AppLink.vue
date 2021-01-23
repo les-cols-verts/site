@@ -23,10 +23,11 @@ export default {
   background-color: $darkGreen;
   color: $white;
   margin: 0.5em;
-  padding: 1em 2em;
+  padding: 0.5em 2em;
   font-weight: bold;
   text-decoration: none;
   border-radius: 2em;
+  font-size: 0.9em;
 }
 
 .link:hover,
