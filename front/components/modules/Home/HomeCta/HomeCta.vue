@@ -43,6 +43,7 @@ export default {
     max-width: 50vw;
     text-align: center;
     margin-bottom: 0;
+    margin-right: 1em;
   }
 }
 </style>
