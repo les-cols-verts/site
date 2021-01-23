@@ -12,9 +12,7 @@
       }"
     >
       <span class="tile__overlay">
-        <span class="tile__button button button--lowercase button--primary">
-          Mooc Agricultures Urbaines
-        </span>
+        <span class="tile__button"> Mooc Agricultures Urbaines </span>
       </span>
     </a>
     <a
@@ -29,9 +27,7 @@
       }"
     >
       <span class="tile__overlay">
-        <span class="tile__button button button--lowercase button--primary">
-          Incubateur de porteurs de projets
-        </span>
+        <span class="tile__button"> Incubateur de porteurs de projets </span>
       </span>
     </a>
   </div>
@@ -73,7 +69,7 @@ export default {
   color: $white;
   padding: 0.8em 1.5em;
   margin: 120px auto auto;
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -88,15 +84,15 @@ export default {
   }
 
   .tile__button {
-    margin: -50px auto auto;
+    margin: -40px auto auto;
   }
 
   .link:hover .tile__button {
     transform: translateY(600%);
-    transition: transform 0.5s;
+    transition: transform 2s;
   }
 
-  .tile__overlay:hover {
+  .link:hover > .tile__overlay {
     background-color: rgba(0, 0, 0, 0.6);
     transition: background-color 1s;
   }
