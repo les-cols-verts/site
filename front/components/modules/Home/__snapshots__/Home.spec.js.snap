@@ -2,9 +2,6 @@
 
 exports[`Home should match snapshot 1`] = `
 <main class="homepage">
-  <picture>
-    <source media="(min-width:650px)" srcset="../../../static/agriculture_urbaine_xl.jpg"> <img src="../../../static/agriculture_urbaine_xs.jpg" alt="Photo d'urbains dans un jardin" style="width: auto;">
-  </picture>
   <div class="map-cta">
     <homecta-stub></homecta-stub>
     <div class="map-container">
@@ -13,5 +10,11 @@ exports[`Home should match snapshot 1`] = `
     </div>
   </div>
   <highlight-stub></highlight-stub>
+  <section class="section">
+    <p class="team">On ne s'est pas encore présenté...</p>
+    <picture>
+      <source media="(min-width:650px)" srcset="../../../static/equipe_xl.jpg"> <img src="../../../static/equipe_xs.jpg" alt="Photo d'urbains dans un jardin" style="width: auto;">
+    </picture>
+  </section>
 </main>
 `;
