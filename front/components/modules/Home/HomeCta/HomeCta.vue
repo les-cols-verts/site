@@ -17,7 +17,7 @@
       href="https://www.lescolsverts.com/blog/"
     ></app-link>
     <app-link
-      text="Nous Contacter"
+      text="Nous contacter"
       href="https://www.lescolsverts.com/contact/"
     ></app-link>
   </section>

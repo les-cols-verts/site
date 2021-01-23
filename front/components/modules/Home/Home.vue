@@ -1,16 +1,5 @@
 <template>
   <main class="homepage">
-    <picture>
-      <source
-        media="(min-width:650px)"
-        srcset="../../../static/agriculture_urbaine_xl.jpg"
-      />
-      <img
-        src="../../../static/agriculture_urbaine_xs.jpg"
-        alt="Photo d'urbains dans un jardin"
-        style="width: auto"
-      />
-    </picture>
     <div class="map-cta">
       <HomeCta />
       <div class="map-container">
@@ -19,6 +8,20 @@
       </div>
     </div>
     <highlight />
+    <section class="section">
+      <p class="team">On ne s'est pas encore présenté...</p>
+      <picture>
+        <source
+          media="(min-width:650px)"
+          srcset="../../../static/equipe_xl.jpg"
+        />
+        <img
+          src="../../../static/equipe_xs.jpg"
+          alt="Photo d'urbains dans un jardin"
+          style="width: auto"
+        />
+      </picture>
+    </section>
   </main>
 </template>
 
@@ -50,7 +53,6 @@ export default {
 
 .map-cta {
   margin-bottom: 30px;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,15 +65,26 @@ export default {
 }
 
 .map-headline {
-  font-size: 1em;
   margin-left: 1em;
   margin-right: 1em;
   margin-bottom: 0.5em;
   color: $brown;
+  font-size: 1.5em;
+}
+
+.team {
+  color: $brown;
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.section {
+  margin: 1em;
 }
 
 @media only screen and (min-width: 1024px) {
   .map-cta {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: initial;
